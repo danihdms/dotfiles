@@ -1,0 +1,213 @@
+# If you come from bash you might have to change your $PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+export JAVA_HOME=/usr/lib/jvm/java-25-openjdk/
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="/home/danielh/.config/tor/tor-browser/Browser/:/home/danielh/.local/bin:$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+#
+#
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Aliases
+alias zshrc="nvim ~/.zshrc"
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+alias /="mkdir"
+alias grep="rg"
+alias c="clear"
+alias r="reset"
+alias gc="gcc -g -Wall -Wextra -Werror"
+alias vim="nvim"
+alias vimrc="nvim ~/.config/nvim/lua/danielh/core/options.lua"
+alias s="du -sh * 2> /dev/null | sort -rh"
+alias cours="cd ~/cours/2024/S1"
+alias tme="cd ~/Cours/2024/S1/crypto/tme"
+alias rev="cd ~/Cours/2023/S2/reverse/"
+alias droit="cd ~/Cours/2024/S1/droit_info/"
+alias tme6="cd ~/Cours/2024/S1/sca/tme/tme6"
+alias exam="cd ~/Cours/2023/S2/reverse/exam/ex2"
+alias com="cd ~/Cours/2024/S1/defhack/"
+alias paru="paru --bottomup --color=always"
+alias barrc="vim ~/.config/polybar/config.ini"
+alias i3config="vim ~/.config/i3/config"
+alias todo="vim ~/files/todo.md"
+alias htb="cd ~/projects/htb/"
+alias rootme="cd ~/projects/root_me/"
+alias crack="cd ~/projects/root_me/cracking/equations/"
+alias pentest="cd ~/projects/root_me/realist/bluebox_pentest/"
+alias p="proxychains -q"
+alias pio="cd ~/Files/Personal/Scouts/Pionniers/24-25/"
+alias ligolo="cd ~/projects/htb/prolabs/zephyr/scripts/tunneling/ligolo/"
+alias pro="cd ~/projects/htb/prolabs/"
+alias mach="cd ~/projects/htb/underpass/"
+alias amsi="cd ~/cours/AMSI/"
+alias ccp="rsync -rah --info=progress2"
+alias ida="/home/danielh/files/apps/IDAPro_Linux/ida64"
+alias pwn="cd /home/danielh/projects/ctf/pwnme_2024/"
+alias ctf="cd ~/projects/ctf/shutlock_2025/"
+alias chrome="/home/danielh/test/chrome-linux/chrome --disable-gpu --disable-software-rasterizer --disable-dev-shm-usage --no-sandbox"
+alias chall="cd ~/cours/AMSI/ctf/ctf_2025/challenges/"
+alias pca="cd ~/files/pro/idex/pca/"
+alias idex="cd ~/files/pro/idex"
+alias alm="cd ~/files/pro/almond/"
+alias order="vim ~/files/pro/synacktiv/order.md"
+alias copy="xclip -selection xrandr"
+alias rec="cd ~/projects/root_me/realist/recoiner/"
+alias word="onlyoffice-desktopeditors"
+
+connect() {
+  local device=$(bluetoothctl devices | grep -i "$1" | cut -d ' ' -f2)
+  bluetoothctl unblock "$device"
+  bluetoothctl connect "$device"
+}
+
+disconnect() {
+  local device=$(bluetoothctl devices | grep -i "$1" | cut -d ' ' -f2)
+  bluetoothctl block "$device"
+  bluetoothctl disconnect "$device"
+}
+
+# Change airpods from audio sink to headset unit and vice versa
+audiosink() {
+  pactl set-card-profile bluez_card.08_5D_53_A2_6A_2E a2dp-sink
+}
+
+headset() {
+  pactl set-card-profile bluez_card.08_5D_53_A2_6A_2E headset-head-unit-cvsd
+}
+
+pdf() {
+  evince $1 &!
+}
+# enable tab-completion for pdf alias
+zstyle ':completion:*:*:pdf:*' file-patterns '**/*.pdf'
+
+odt() {
+  onlyoffice-desktopeditors $1 &!
+}
+
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  startx 2> /dev/null
+fi
+
+m() {
+  id=$(
+  xinput list | grep "Mouse MX Master 2S" | cut -f2 | cut -d'=' -f2 | head -n 1
+)
+prop=$(
+xinput list-props $id | grep "libinput Scroll Method Enabled (" | awk -F'[()]' '{print $2}'
+)
+xinput --set-prop $id $prop 0, 0, 1
+}
+
+screen() {
+  xrandr --newmode "1920x1080_60.00"  172.80  1920 2040 2248 2576  1080 1081 1084 1118  -HSync +Vsync
+  xrandr --addmode "HDMI-$1" 1920x1080_60.00
+  
+  # Default to "right" unless "left" is specified
+  POSITION=${2:-right}
+  
+  xrandr --output "HDMI-$1" --mode 1920x1080_60.00 --${POSITION}-of eDP-1
+}
+
+# opam configuration
+[[ ! -r /home/danihdms/.opam/opam-init/init.zsh ]] || source /home/danihdms/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# Created by `pipx` on 2024-03-29 14:33:37
+export PATH="$PATH:/home/danielh/.local/share/gem/ruby/3.0.0/bin:/home/danielh/projects/htb/scripts"
+
+export PATH="$PATH:/home/danielh/.bifrost/bin"
+export PATH=$PATH:~/.local/bin

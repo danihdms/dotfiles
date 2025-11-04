@@ -1,0 +1,54 @@
+* {
+    border-radius: 10px;
+    background-color: #222835;
+    text-color: #8ca0aa;
+    spacing: 0;
+    width: 600px;
+    height: 350px;
+}
+
+window {
+    border-color: #ffffff25;
+    border: 1 1 1px 1;
+}
+
+inputbar {
+    border: 1 1 1px 1;
+    border-radius: 10px;
+    border-color: #ffffff15;
+    children: [entry];
+    margin: 10px;
+}
+
+textbox {
+    background-color: #2e343f;
+    border: 0 0 1px 0;
+    border-color: #282C33;
+    padding: 8px 16px;
+}
+
+entry {
+    padding: 16px;
+}
+
+listview {
+    cycle: false;
+    margin: 0 0 -1px 0;
+    scrollbar: false;
+    columns: 2;
+}
+
+element {
+    border: 0 0 1px 0;
+    padding: 10px;
+    margin: 0 10 0 10px;
+    border-radius: 10px;
+}
+
+element-text selected {
+    background-color: #ffffff00;
+}
+
+element selected {
+    background-color: #ffffff15;
+}

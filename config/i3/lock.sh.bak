@@ -1,0 +1,35 @@
+#!/bin/sh
+
+BLANK='#12121f'
+CLEAR='#12121f'
+DEFAULT='#87bff7'
+TEXT='#d4d7ff'
+WRONG='#bf4a7f'
+VERIFYING='#7ed7c0'
+
+DATE=$(date +"%A, %B %-d")
+
+i3lock \
+	--insidever-color=$CLEAR \
+	--ringver-color=$VERIFYING \
+	\
+	--insidewrong-color=$CLEAR \
+	--ringwrong-color=$WRONG \
+	\
+	--inside-color=$BLANK \
+	--line-color=$BLANK \
+	--separator-color=$DEFAULT \
+	\
+	--verif-color=$TEXT \
+	--wrong-color=$TEXT \
+	--time-color=$TEXT \
+	--date-color=$TEXT \
+	--layout-color=$TEXT \
+	--keyhl-color=$WRONG \
+	--bshl-color=$WRONG \
+	\
+	--blur 9 \
+	--clock \
+	--indicator \
+	--clock --force-clock --time-size=96 --time-color=FFFFFFFF \
+	--date-str="$DATE" --date-pos="tx:ty+80" --date-size=32 --date-color=FFFFFFFF
